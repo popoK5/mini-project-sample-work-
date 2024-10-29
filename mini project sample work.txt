@@ -1,0 +1,157 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <map>
+
+using namespace std;
+
+struct Book {
+    string title;
+    string author;
+    string genre;
+    string summary;
+};
+
+int main() {
+    vector<Book> library = {
+        {"1. The Lord of the Rings", "J.R.R. Tolkien", "Fantasy"},
+        {"2. The Lord of the Rings", "J.R.R. Tolkien", "Fantasy"},
+        {"Pride and Prejudice", "Jane Austen", "Romance"},
+        {"1984", "George Orwell", "Dystopian"},
+        {"The Hitchhiker's Guide to the Galaxy", "Douglas Adams", "Science Fiction"},
+        {"To Kill a Mockingbird", "Harper Lee", "Fiction"},
+        {"A Brief History of Time", "Stephen Hawking", "History"},
+        {"Dracula", "Bram Stoker", "Horror"},
+        {"Sherlock Holmes", "Arthur Conan Doyle", "Mystery"}
+    };
+
+    int choice;
+    cout << "Select Genera:\n";
+    cout << "1. Fantasy\n";
+    cout << "2. History\n";
+    cout << "3. Romance\n";
+    cout << "4. Science Fiction\n";
+    cout << "5. Horror\n";
+    cout << "6. Mystery\n";
+    cin >> choice;
+
+    string selectedGenre;
+    switch (choice) {
+        case 1:
+            selectedGenre = "Fantasy";
+            break;
+        case 2:
+            selectedGenre = "History";
+            break;
+        case 3:
+            selectedGenre = "Romance";
+            break;
+        case 4:
+            selectedGenre = "Science Fiction";
+            break;
+        case 5:
+            selectedGenre = "Horror";
+            break;
+        case 6:
+            selectedGenre = "Mystery";
+            break;
+        default:
+            cout << "Invalid choice. Please try again.\n";
+            return 1;
+    }
+    
+     int select;
+    cout << "Select a Author:\n";
+    cout << "1. KARMA\n";
+    cout << "2. PEMA\n";
+    cout << "3. WANGMO\n";
+    cout << "4. DORJI\n";
+    cout << "5. ASHIR\n";
+    cout << "6. MOYEAD\n";
+    cin >> select;
+    
+     string selectbook;
+     switch (choice) {
+        case 1:
+            for (const Book& book : library) {
+                if (book.genre == "Fantasy") {
+                    cout << "- " << book.title << " by " << book.author << endl;
+                    cout << "  Summary: " << book.summary << endl;
+                }
+            }
+            break;
+        case 2:
+            for (const Book& book : library) {
+                if (book.genre == "History") {
+                    cout << "- " << book.title << " by " << book.author << endl;
+                    cout << "  Summary: " << book.summary << endl;
+                }
+            }
+            break;
+        case 3:
+        for (const Book& book : library) {
+                if (book.genre == "Romance") {
+                    cout << "- " << book.title << " by " << book.author << endl;
+                    cout << "  Summary: " << book.summary << endl;
+                }
+            }
+            break;
+        case 4:
+        for (const Book& book : library) {
+                if (book.genre == "Science") {
+                    cout << "- " << book.title << " by " << book.author << endl;
+                    cout << "  Summary: " << book.summary << endl;
+                }
+            }
+            break;
+        case 5:
+        for (const Book& book : library) {
+                if (book.genre == "Horror") {
+                    cout << "- " << book.title << " by " << book.author << endl;
+                    cout << "  Summary: " << book.summary << endl;
+                }
+            }
+            break;
+        case 6:
+           for (const Book& book : library) {
+                if (book.genre == "Mystery") {
+                    cout << "- " << book.title << " by " << book.author << endl;
+                    cout << "  Summary: " << book.summary << endl;
+                }
+            }
+            break;
+        default:
+            cout << "Invalid choice.\n";
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    cout << "\nBooks in the " << selectedGenre << " genre:\n";
+    for (const Book& book : library) {
+        if (book.genre == selectedGenre) {
+            cout << "- " << book.title << " by " << book.author << endl;
+        }
+    }
+
+    return 0;
+}
+}
